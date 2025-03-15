@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 p-6">
+
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+
+        <!-- Tarjetas de estadísticas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card">
+                <h2>Usuarios Activos</h2>
+                <p class="text-2xl font-bold">9,100</p>
+            </div>
+            <div class="card">
+                <h2>Ingresos Totales</h2>
+                <p class="text-2xl font-bold">$29,000</p>
+            </div>
+            <div class="card">
+                <h2>Nuevos Clientes</h2>
+                <p class="text-2xl font-bold">1,200</p>
+            </div>
+            <div class="card">
+                <h2>Proyectos Completados</h2>
+                <p class="text-2xl font-bold">320</p>
+            </div>
+        </div>
+
+        <!-- Gráficas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="chart-container">
+                <h2>Usuarios por Mes</h2>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Ingresos por Mes</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
